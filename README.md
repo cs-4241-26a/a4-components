@@ -1,33 +1,9 @@
-Assignment 4 - Components
-===
+## Tierable - Svelte Edition
 
-Due: September 25th, by 1:59 PM.
+This project demonstrates a fully featured web application for creating and collaborating on tier lists. Users can create, edit, and delete their own tier lists as well as share their lists with others to allow them to vote. Implemented as a single page app using the History State API for navigations.
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+This project should be functionality identical to my A3 project but with the frontend reimplemented using Svelte.
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+Render Link: https://a4-kyleplosky.onrender.com/
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
-
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+I found Svelte to be quite similar to React in terms of functionality (which I have used in the past), most of the frustration in this project came from figuring out the minor differences between the two (especially the fact that in Svelte, you can't explicitly control which states update an effect). Overall I think both Svelte and React can make managing a complex web application significantly easier when used well, though the added complexity of the build step does remove some of the efficiency of traditional web development. I found Svelte to stray away from web development conventions moreso than React does, with the runes and templating syntax, making it a bit of a steeper learning curve from basic HTML and JS. I also found documentation and build tool support to be less complete than for React so I think I will continue using React for the time being, but I'm glad to have some Svelte experience under my belt.
