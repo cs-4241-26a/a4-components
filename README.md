@@ -1,33 +1,12 @@
-Assignment 4 - Components
-===
+Aidan Fisher
+https://a4-aidan-fisher.onrender.com/
 
-Due: September 25th, by 1:59 PM.
+This is my A3 expense tracker, rebuilt using React components instead of plain JavaScript for the front end. The login page and backend (Express, MongoDB, sessions) are unchanged from A3 — only the expense form, table, editing, and deleting were rewritten as React components (App, ExpenseForm, ExpenseTable).
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+Did React help or hurt? Overall it felt a bit easier once it was set up. Not having to manually build HTML strings and manage which DOM elements to update made the add/edit/delete logic simpler to follow, and the edit-in-place row logic was cleaner using state instead of directly replacing HTML. The initial setup (Vite, connecting it to my existing Express server, getting the proxy configured) took some extra steps compared to just editing a plain JS file, but the end result looks and works better than my original vanilla JS version.
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
-
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
-
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+## What I changed from A3
+- Replaced public/index.html and public/js/main.js with a React app (built with Vite) living in the client folder
+- Split the UI into three components: App.jsx (main layout + state), ExpenseForm.jsx (add form), ExpenseTable.jsx (results table, inline editing, delete)
+- server.js now serves the built React app (client/dist) instead of the old static HTML, but the API routes (/expenses, /add, /edit, /delete, /login, /logout) are unchanged
+- Login page and backend logic were left exactly as they were in A3

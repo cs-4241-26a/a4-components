@@ -1,0 +1,18 @@
+body {
+  background-color: #f4f1ea;
+}
+
+h1 {
+  color: #33474d;
+}
+
+.table {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #33474d;
+  color: white;
+}
