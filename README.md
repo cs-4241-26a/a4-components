@@ -1,33 +1,14 @@
-Assignment 4 - Components
-===
+## Getter-Done
 
-Due: September 25th, by 1:59 PM.
+Hosting Link: https://a4-thomas-gilbert.onrender.com
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
-
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
-
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
-
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+For this project I reimplemented my A3 in React. My todo list app supports adding, deleting, toggling, and editing functionality. To use this app is very straight-forward. First the
+user must log in. If the user does not have an account one will be created for them automatically.
+After logging in, the user can type a task into the text box field and click add new task
+(or hit the enter key) and it will add it to that user's list of tasks. You can check a task off when
+you complete it and delete a task if you no longer need to do it. You can also edit a tasks text and
+priority. This biggest things I changed for this implementation in React was the component structure and the Vite + Vite-Express.
+For this assignment I hooked up the backend to vite-express and I had two React components, App.jsx and Task.jsx.
+In my opinion, React made it so much easier to develop this app simply because of the useState hook holding data as React state.
+I also like how I can just insert a component as many times into a file with one line of code. Overall, React made it so much
+easier to make this app.
