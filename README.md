@@ -1,33 +1,12 @@
 Assignment 4 - Components
 ===
 
-Due: September 25th, by 1:59 PM.
+## AgeSort
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+By Becca Eiferman
+Link: https://a4-beccaeiferman.onrender.com/
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+My project is Age Sort! First, an account must be created or signed into before the user is redirected to the main screen. In the "User Information" area enter you or your friends' name, birth year, and class, and then press the "Submit" button! The webpage will the calculate the age you turn in 2026, which is displayed in the "User Information" table below. The application sorts the data entires by either youngest to oldest or oldest to youngest depending on which button has been selected. There is also a "Delete" button to the right of each row in the table that allows a row of data to be removed from the webpage, and an "Edit" button that allows a user to edit an entry. There is also a button which leads to a page that contains all user data from every user of the webpage.
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
-
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+Because it was my first time working with Render, I would say that it hindered the development experience as I was working through the assignment trying to learn it. Also, converting the already written HTML and Javascript into Render was also tedious. However, once I got the hang of it, it became much easier to finish the assignment. I think that working with Render on a fresh project could make the development experience smoother in the future now that I udnderstand it.
+Also, there were a lot of issues on Render with my project and it took like three hours to fix. But its okay it works now yay
