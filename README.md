@@ -1,33 +1,17 @@
-Assignment 4 - Components
-===
+## TV Show Progress Tracker
+https://a4-nicholas-houghton.onrender.com/  
+Nicholas Houghton
 
-Due: September 25th, by 1:59 PM.
+This is a TV Show progress tracker which allows multiple users to track the TV shows they are watching. The goal is, after logging in, to allow you to enter the name of any tv show you have or are currently watching, and then include the number of episodes you have seen, and then the total number of episodes in the show.
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+To use the application, you must first login. Here are premade accounts:  
+User: Admin Password: Admin  
+User: Admin2 Password: Admin2  
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+What I changed from a3 was implementing the client-side of the application with react. I created some seperate components instead of doing everything in App.jsx. There is the form component which is the functionality of the input form and the results which displays the final table.  
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
 
-Deliverables
----
+Did the new technology improve or hinder the development experience?  
+I think the new technology improved the development experience. Instead of having all of the frontend server logic in one javascript file, I think it is easier to manage when you separate out the components and know that both functionality and display of a component is in one file. For example the form functionality, and display can be accessed in Form.jsx. I also think as projects get bigger, it would have a very beneficial effect so code does not get lost.  
 
-Do the following to complete this assignment:
 
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
