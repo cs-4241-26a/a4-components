@@ -148,7 +148,6 @@ export default function App() {
       <p>
         In order to remove a player, enter their name in the remove field and click the <span id="remove-span">remove</span> button.
       </p>
-      <p>You may need to refresh the page to see the proper player list.</p>
       <table id="table">
         <thead>
           <tr>

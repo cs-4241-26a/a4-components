@@ -4,9 +4,9 @@ import ViteExpress from 'vite-express'
 const app = express()
 
 let players = [
-  { 'name': 'Yordan Alvarez', 'avg': 0.317, 'obp': 0.433, 'slg': 0.604 },
-  { 'name': 'Mike Trout', 'avg': 0.239, 'obp': 0.375, 'slg': 0.423 },
-  { 'name': 'Juan Soto', 'avg': 0.281, 'obp': 0.402, 'slg': 0.542 },
+  { 'name': 'Yordan Alvarez', 'avg': 0.315, 'obp': 0.432, 'slg': 0.600 },
+  { 'name': 'Mike Trout', 'avg': 0.246, 'obp': 0.385, 'slg': 0.428 },
+  { 'name': 'Juan Soto', 'avg': 0.274, 'obp': 0.393, 'slg': 0.522 },
 ]
 
 app.use(express.json())
