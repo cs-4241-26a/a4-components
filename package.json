@@ -1,0 +1,41 @@
+{
+  "name": "a4-ryan-ginn",
+  "version": "1.0.0",
+  "description": "CS4241 Assignment 4 - Components: the A3 Expense Tracker with its client re-implemented in React (Vite), backed by Express + MongoDB.",
+  "main": "server.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "build": "vite build",
+    "dev:client": "vite",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "cs4241",
+    "express",
+    "mongodb",
+    "expense-tracker",
+    "react"
+  ],
+  "author": "Ryan Ginn",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rizer-dev/a3-ryanginn.git"
+  },
+  "homepage": "https://a4-ryanginn.onrender.com",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-mongo": "^5.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mongoose": "^8.5.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.1"
+  }
+}

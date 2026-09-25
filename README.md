@@ -1,33 +1,27 @@
-Assignment 4 - Components
-===
+## Expense Tracker (React)
 
-Due: September 25th, by 1:59 PM.
+https://a4-ryan-ginn.onrender.com
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+This is my A3 Expense Tracker with its client side rebuilt in **React** (bundled with **Vite**). The Express + MongoDB backend, session auth, and the login page are unchanged from A3. The main app page, which was plain HTML plus about 450 lines of DOM-manipulation JavaScript (`public/app.html` + `public/js/app.js`), is now a set of React components in `client/src/`:
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+- `App` owns the state (the transaction list, the logged-in user, the alert, and the transaction being edited) and makes the API calls.
+- `Navbar`, `AlertBox`, and `SummaryCards` display the user, messages, and income/expense/net totals.
+- `TransactionForm` is a controlled add/edit form. `RecurrencePicker` and a reusable `DayPicker` handle the weekly and monthly day selection.
+- `TransactionTable` / `TransactionRow` show the results, with Edit and Delete buttons.
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
+`npm run build` compiles the client into `dist/`. Express serves `dist/index.html` at `/app.html`, still behind the server-side login check. I also fixed an A3 bug where dates showed one day early in US time zones.
 
-Deliverables
----
+**Did React help or hurt?** Overall it improved development. In A3, every change (like starting an edit or toggling the recurring panel) meant manually syncing radio buttons, hidden panels, button classes, and summary text, and it was easy to miss one. In React the UI is just a function of state, so edit mode is simply "set `editing`", and totals, labels, and day pickers update themselves. The costs were adding a build step (Vite, plus a build command on Render) and rethinking the form as controlled inputs, but the final code is shorter and much easier to follow.
 
-Do the following to complete this assignment:
+### Running locally
+```
+npm install
+npm run build   # build the React client into dist/
+npm start       # http://localhost:3000
+```
+For live-reload development, run `npm start` and `npm run dev:client` together, then open http://localhost:5173/ (Vite forwards `/api` to Express).
 
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
+**Render:** set the Build Command to `npm install && npm run build` and the Start Command to `npm start`.
 
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+## Technical Achievements (from A3)
+- 100% Lighthouse
