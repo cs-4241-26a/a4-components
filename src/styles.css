@@ -1,0 +1,70 @@
+body {
+    background:black;
+    color:pink;
+    font-family: Georgia, 'Times New Roman', Times, serif
+}
+
+#root {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+label { 
+  text-align: center;
+}
+
+.question { 
+  display: flex;
+  margin: 40px; 
+  background: black; 
+  color: hotpink;
+  text-align: center;
+}
+
+form {
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+}
+
+#submit { 
+  background: gold; 
+  color: black;
+  text-align: center; 
+}
+
+#div3 { 
+  display: flex; 
+  justify-content: center; 
+  flex-direction: column;
+}
+
+table { 
+  border: 1px solid gold;
+  border-collapse: collapse;
+}
+
+thead { 
+  color: hotpink;
+}
+
+tbody { 
+  color: pink;
+}
+
+td { 
+  border: 1px solid gold;
+  text-align: center;
+}
+
+.verdict { 
+  color: hotpink;
+}
+
+.del { 
+  background: darkred; 
+  color: white; 
+  text-align: center;
+}
