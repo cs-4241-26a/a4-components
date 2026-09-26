@@ -1,33 +1,10 @@
-Assignment 4 - Components
-===
+## Emma's Epic TODO List
 
-Due: September 25th, by 1:59 PM.
+Hosting Link: (https://a4-emma-normand.onreact.com/)
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+For this project, I recreated my assignment 2 submission using react. I found this more difficult than it was orginally to make the project because I am so used to the formatting and organization of using exclusivley HTML, CSS, and JS; I found myself wishing the html and js inside of App.jsx could be split back into js and html. Furthermore, I found less available helpful documentation online about using react to make a website than I did finding documentation for assignment 2 originally.
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
-
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
-
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+**Sources**
+- General react advice: (https://www.geeksforgeeks.org/reactjs/react/)
+- Creating a todo list in react/general react advice: (https://www.youtube.com/watch?v=9wiWzu_tRB0)
+- Creating a todo list in react/general react advice: (https://www.youtube.com/watch?v=SAJd0cGnAjI)
