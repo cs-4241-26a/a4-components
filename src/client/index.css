@@ -1,0 +1,12 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-image: url('/brown-gingham.jpg');
+  background-size: cover;
+  /* background-color: transparent!;
+  background: transparent!; */
+}
