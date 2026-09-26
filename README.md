@@ -1,33 +1,14 @@
-Assignment 4 - Components
-===
+## Griffin's To-Do List
 
-Due: September 25th, by 1:59 PM.
+Live site: [https://a4-griffin-munhall.onrender.com](https://a4-griffin-munhall.onrender.com)
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+For A4, I took my A3 code and re-implemented the client side in React. The app is still the same to-do list with three lists: an open list for new tasks, an in-progress list that only allows a maximum of three items, and a done list for finished tasks. You add a task with a name, notes, priority, and an important flag, and the server computes a derived deadline based on the priority. Buttons on each task let you move it between lists, edit it, or delete it. Users still log in with GitHub OAuth, and each user's tasks are stored separately in MongoDB.
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+Changed from A3: Previosly, main.js built each task with createElement and redrew the list by clearing out innerHTML. Now this replaced with React components built with Vite.
+- App holds the state, loads the user and tasks, and sends the POST requests to the server.
+- TodoForm is the add and edit form. The inputs are controlled with useState, and after Edit is clicked it fills in the task's info and the button changes.
+- TodoList is one of three carsd, and Todoitem is one task with the buttons for that respective list.
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
+Server-side is all the same as A3, except now it serves the Vite built in dist not public.
 
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+Did React improve or hinder the development experience? Overall, I think it was improved quite a bit. In A3, finding elements with querySelector and rebuilding lists by hand was quite annoying, but in React I just have to update state. Also, splitting the page into components made each shorter and more readable. There was more setup, however.
