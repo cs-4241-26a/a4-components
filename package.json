@@ -1,0 +1,28 @@
+{
+  "name": "",
+  "version": "",
+  "description": "",
+  "author": "",
+  "scripts": {
+    "start": "node server.js",
+    "bluld": "vite build"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mime": "^2.4.4",
+    "mongoose": "^9.10.0",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.4",
+    "vite": "^8.3.1",
+    "vite-express": "^0.22.1"
+  },
+  "engines": {
+    "node": "24.x"
+  }
+}
