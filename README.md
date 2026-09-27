@@ -1,33 +1,10 @@
-Assignment 4 - Components
-===
+## Black Hole Boogie - CS4241 A4
 
-Due: September 25th, by 1:59 PM.
+Zackary Perry
+https://a4-zackary-perry.onrender.com
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+This project contains a small game titled Black Hole Boogie, in which the user needs to press one of four keys as fast as they can before a ball gets sucked up by the black holes surrounding it. Building upon the features included in Assignment 3, the client-side data handling and interface have been refactored to use Svelte components instead of vanilla JavaScript. The existing authentication system, profile storage, Bootstrap 5 styling, and game mechanics remain the same. The only changes made were to the score submission form and the user records table, which were re-implemented using Svelte 5 and bundled with Vite.
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+The submission form was rebuilt as `ScoreForm.svelte`, utilizing Svelte's two-way data binding to manage inputs for score, duration, difficulty, and notes without needing to manually query form elements. The user records display was rebuilt as `ScoreTable.svelte`, replacing the previous manual row creation with declarative list rendering blocks. Because the game itself as well as user authentication remained as JavaScript, communication between the Svelte components and the existing code was established using Svelte stores and custom event listeners.
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
-
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+Working with Svelte 5 proved to be a mixed experience that could've been overall positive if it were being implemented from scratch. Svelte does significantly streamline user interface code by removing the need for manual DOM querying, explicit element creation, and custom string sanitization routines. However, incorporating it into a project that already had a working vanilla HTML and Bootstrap layout resulted in a lot of troubleshooting that otherwise probably wouldn't have been present. Overall, whiile Svelte made the submission form and user records aspects of the Black Hole Boogie website much cleaner, it may be more beneficial to implement it sooner in the website development process rather than later.
