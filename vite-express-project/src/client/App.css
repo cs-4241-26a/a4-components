@@ -1,0 +1,68 @@
+body {
+  background:#f4f7fb;
+  color:#1f2937;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+h1,h2,h3,p {
+  text-align: center;
+  color: #244f7c;
+}
+
+.form-section, .results-section {
+  background-color: white;
+  padding: 1rem;
+}
+
+#application-form {
+  display: grid;
+  align-items: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+button {
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.form-section button {
+  color: #244f7c;
+}
+
+button:hover {
+  background-color: #244f7c;
+  color: white;
+}
+
+.update-button {
+  background-color: #287a4b;
+  color: white;
+}
+
+.update-button:hover {
+  background-color:#1f633c;
+}
+
+.delete-button {
+  background-color: #dc2626;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #962d22;
+}
+
+#result-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,td {
+  text-align: center;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eef3f8;
+}
