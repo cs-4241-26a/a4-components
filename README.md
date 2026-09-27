@@ -1,33 +1,17 @@
-Assignment 4 - Components
-===
+## Poetry Entry System (React)
 
-Due: September 25th, by 1:59 PM.
+Render link: https://a4-mohammed-musawwir.onrender.com
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+This is my A3 poetry app with the front end redone in React. The server side (Express, MongoDB, GitHub login) is the same as A3. The part that shows and updates the poems is now made of React components instead of the plain JavaScript I had before.
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+Components I made:
+- **App** - holds the poem list, the status message, and which poem is being edited, and does the fetch calls to the server
+- **PoemForm** - the add/edit form, including the maqam checkboxes and the poem form radio buttons. It fills itself in when you click Edit on a poem
+- **PoemTable** - the table of poems with the Edit and Delete buttons
+- **LoginBox** - the "Log in with GitHub" box, which hides once you are logged in
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
+The login UI is same as from A3.
 
-Deliverables
----
+I used Vite to build the React code. 
 
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+AI notice: ran into a bunch of issues and I AI to help me troubleshoot a lot of parts.
