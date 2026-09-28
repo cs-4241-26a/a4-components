@@ -1,33 +1,28 @@
-Assignment 4 - Components
+mini svelte-odies - Assignment 4
 ===
 
-Due: September 25th, by 1:59 PM.
+### Lex Johnson
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+[https://a4-lexjohnson.onrender.com/](https://a4-lexjohnson.onrender.com/)
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+For this assignment, I adapted my assignment 3 "mini melodies"
+project to render the frontend using Svelte. My previous code was a
+bit of a hodgepodge and involved a lot of directly modifying the
+content of HTML elements, which would have been a huge headache to
+maintain if I ever decided to add more features. Using a reactive
+frontend framework like Svelte helped a lot with this, since it
+allowed all the interdependencies on the page to update on their own
+with very little effort on my part. I chose Svelte because my project
+team is using React for the final project, so this gave me the
+opportunity to learn both frameworks and choose which one I prefer
+for my future work.
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
-
-Deliverables
----
-
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+The downside was that introducing Vite to the project (and therefore
+running the frontend and backend on seperate servers) caused a *lot*
+of headaches when adapting my old code. In fact, due to time
+constraints, I had to strip the account system out of this version
+of the project after struggling for a while to make cross-origin
+cookies work. I think I would have had a much better time if my
+project had been Vite-based from the beginning, but having to
+reassemble an existing project on top of a new framwork was mostly
+just a hassle.
