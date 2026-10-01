@@ -1,33 +1,39 @@
-Assignment 4 - Components
-===
+## Car Fleet Tracker (React)
 
-Due: September 25th, by 1:59 PM.
+Link: https://a4-brandoncontardi-1.onrender.com 
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+This is my Assignment 3 Car Fleet Tracker with the client side of the fleet page re-implemented using React
+components (built with Vite). The Express server, MongoDB/Mongoose models, session-based login, and the login page
+itself are unchanged from A3. The old `views/app.html` + `public/js/main.js` (which manually built table rows with
+`document.createElement` and read/wrote form fields with `querySelector`) was replaced by a React app in `client/`:
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+- `App.jsx` owns the state (the user's car list, the car currently being edited, and any error message) and calls the API.
+- `Navbar.jsx` shows the logged-in username and the Log Out button.
+- `CarForm.jsx` is a controlled form used for both adding and editing; it reloads its fields whenever the car being edited changes.
+- `CarTable.jsx` / `CarRow.jsx` render the fleet table (with an empty-state row, and the row being edited highlighted).
+- `api.js` wraps the `fetch` calls and redirects to the login page on a 401.
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
+The server builds the React app into `dist/` and serves it at `/app` only to logged-in users. Styling is still Bulma plus the small `public/css/main.css`.
 
-Deliverables
----
+**Did the new technology improve or hinder the development experience?** Overall it improved it. In A3, every change to
+the data meant manually clearing and rebuilding the table and keeping the form, the "editing" state, and the button
+labels in sync by hand; with React, the UI is just a function of state, so after the server returns the updated car list
+I only call `setCars` and everything re-renders correctly. The main cost was extra setup: adding a Vite build step,
+configuring the dev proxy to the Express server, and making the build output work with the existing authenticated
+`/app` route and Helmet's Content Security Policy.
 
-Do the following to complete this assignment:
+### Running locally
 
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
+Create a `.env` with `MONGODB_URI` and `SESSION_SECRET`, then:
 
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
+```bash
+npm install
+npm run build
+npm start
+```
 
-## Your Web Application Title
+Visit http://localhost:3000.
 
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+## AI Usage
+AI was used to help convert the A3 client-side JavaScript into React components and to draft this README. I checked the
+code and README for accuracy before submission.
