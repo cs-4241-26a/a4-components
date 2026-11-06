@@ -1,0 +1,22 @@
+.stats {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 790px) {
+    .stats {
+        flex-direction: column;
+    }
+
+    .wideScreen {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 791px) {
+    .narrowScreen {
+        display: none;
+    }
+}
